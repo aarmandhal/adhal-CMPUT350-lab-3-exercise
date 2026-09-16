@@ -5,8 +5,9 @@ Answer: Dereferencing is a direct pointer access instead of a virtual call throu
 
 2. What is a disadvantage of having the stored pointer (instead of going through the control block)?
 
-Answer: A stored pointer duplicates the address already stored in the control block, making the object bigger and creating a 
-second pointer that needs to be deleted on destruction instead of just the one in the control block.
+Answer: A stored pointer duplicates the address already in the control block, making each shared pointer object larger, and 
+creates a second copy of the address that could move out of sync with the control block's managed pointer if not managed
+carefully.
 
 
 3. From a system design/architecture perspective, what disadvantages are there to using shared pointers?
